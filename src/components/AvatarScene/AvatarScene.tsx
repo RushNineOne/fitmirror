@@ -3,9 +3,9 @@
 // Avatar humain procédural amélioré + T-shirt ajusté
 // ============================================================
 
-import { useRef, useMemo } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
-import { OrbitControls, ContactShadows, Sphere, Cylinder, RoundedBox } from '@react-three/drei'
+import { useMemo } from 'react'
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls, ContactShadows } from '@react-three/drei'
 import * as THREE from 'three'
 import type { MorphTargets } from '../../hooks/useAvatarMorphing'
 import type { Produit, ResultatFit } from '../../types'
@@ -31,6 +31,7 @@ interface AvatarProps {
 function Avatar({ morphTargets }: AvatarProps) {
   const { corpulence, epaulesLargeur, tailleScale } = morphTargets
   const h = tailleScale
+  void h
 
   // Dimensions dynamiques
   const tw  = 0.19 + epaulesLargeur * 0.10  // demi-largeur torse
@@ -135,7 +136,7 @@ interface TShirtProps {
   resultatFit: ResultatFit | null
 }
 
-function TShirt({ morphTargets, produit, resultatFit }: TShirtProps) {
+function TShirt({ morphTargets, produit, resultatFit: _resultatFit }: TShirtProps) {
   const { corpulence, epaulesLargeur, tailleScale } = morphTargets
   const h = tailleScale
 

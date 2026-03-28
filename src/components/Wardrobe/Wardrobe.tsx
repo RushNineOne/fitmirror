@@ -9,7 +9,6 @@ export function Wardrobe() {
   const [marqueActive, setMarqueActive] = useState(MARQUES[0].id)
   const { produitSelectionne, setProduit } = useFitMirrorStore()
 
-  const marque = MARQUES.find(m => m.id === marqueActive)!
   const produitsFiltres = PRODUITS.filter(p => p.marqueId === marqueActive)
 
   return (
