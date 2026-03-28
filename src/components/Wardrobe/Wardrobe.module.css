@@ -1,0 +1,94 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 28px 20px;
+  width: 250px;
+  min-width: 250px;
+  overflow-y: auto;
+  border-left: 1px solid rgba(255,255,255,0.06);
+  background: #0D0D0F;
+}
+
+.titre {
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+/* Marques */
+.marques { display: flex; flex-direction: column; gap: 5px; }
+
+.marqueBouton {
+  padding: 10px 14px;
+  border-radius: 9px;
+  border: 1px solid rgba(255,255,255,0.07);
+  background: transparent;
+  color: rgba(255,255,255,0.45);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.marqueBouton:hover {
+  background: rgba(255,255,255,0.05);
+  color: rgba(255,255,255,0.75);
+}
+
+.marqueBouton[data-active='true'] {
+  background: rgba(255,255,255,0.07);
+  border-color: var(--accent, #00D4FF);
+  color: #fff;
+}
+
+/* Séparateur */
+.sep {
+  height: 1px;
+  background: rgba(255,255,255,0.06);
+  margin: 0 -4px;
+}
+
+/* Produits */
+.produits { display: flex; flex-direction: column; gap: 6px; }
+
+.produitCard {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 9px 11px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: 'DM Sans', sans-serif;
+  width: 100%;
+}
+
+.produitCard:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.12);
+}
+
+.produitCard[data-active='true'] {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.2);
+}
+
+.colorSwatch {
+  width: 34px;
+  height: 34px;
+  border-radius: 7px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.produitInfo { display: flex; flex-direction: column; gap: 2px; text-align: left; }
+.produitNom { font-size: 12.5px; font-weight: 500; color: rgba(255,255,255,0.82); }
+.produitPrix { font-size: 11px; color: rgba(255,255,255,0.35); }
